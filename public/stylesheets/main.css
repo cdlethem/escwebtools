@@ -1,0 +1,74 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+body {
+	padding-top: 50px;
+}
+
+.jumbotron {
+    color: #2c3e50;
+    background: #ecf0f1;
+    font-family: Raleway;
+	margin-top: 40px;
+}
+
+.jumbotron h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    ;
+}
+
+.col-lg-6 {
+    padding-bottom: 12px
+}
+
+.title-overlay {
+    color: #5a6774;
+    text-shadow: 10px;
+    text-shadow: #2c3e50
+}
+
+.navbar-brand {
+    padding: 3px;
+}
+
+.navbar-brand>img {
+    height:100%;
+    width: auto;
+    padding-left: 10px;
+}
+
+.navbar-inverse {
+    background: #2c3e50;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand {
+    background: #2c3e50;
+}
+
+#delete-form {
+    display: inline;
+}
+
+iframe {
+    min-width: 100%;
+	min-height: 1200px;
+  }
+
+#signindiv {
+    padding-top: 80px;
+    position: fixed;
+    /* center the element */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+    min-height: 10em;
+    width: 30%;
+}

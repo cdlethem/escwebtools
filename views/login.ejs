@@ -1,0 +1,14 @@
+<% include ./partials/header %> 
+
+<div class="container" id="signindiv">
+    <form class="form-signin" action="/login" method="POST">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">ESC Email address</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="ESC Email address" name="username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+</div> 
+
+<% include ./partials/footer %> 
