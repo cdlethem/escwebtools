@@ -63,4 +63,13 @@ router.get("/school_choice_tools", middleware.isLoggedIn, function(req, res){
     res.render("apps/school_choice_tools")  
 })
 
+router.get('/failure', (req,res) => {
+    res.render("failure")
+})
+
+router.get('/success', (req,res) => {
+    req.flash("success", "Data successfully updated from Podio");
+    res.render('success')
+})
+
 module.exports = router;

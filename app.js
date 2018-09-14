@@ -10,8 +10,12 @@ var express     = require("express"),
     seedDB      = require("./seedUsers")
     
 //requiring routes
-var indexRoutes = require("./routes/index")
-    
+var indexRoutes = require("./routes/index");
+var podioRoutes = require("./routes/podio");
+var adminRoutes = require("./routes/admin");
+var srtRoutes = require("./routes/srt");
+var potRoutes = require("./routes/pot");
+
 mongoose.connect("mongodb://localhost/web_tools_db");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -40,6 +44,10 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
+app.use("/podio", podioRoutes);
+app.use("/admin", adminRoutes);
+app.use("/srt", srtRoutes);
+app.use("/pot", potRoutes);
 
 app.listen(3000, process.env.IP, function(){
    console.log("The server has started on port 3000");

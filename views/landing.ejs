@@ -3,10 +3,24 @@
 <div class="container">
     <div class="jumbotron">
         <h1><span class="glyphicon glyphicon-stats"></span> ESC Knowledge Base</h1>
-        <p>Welcome to the ESC knowledge base. Select an application below to get started. If you get stuck, check out the FAQ or submit a support ticket</p>
+        <p>Welcome to the ESC knowledge base. Sign in and then select an application to get started. If you have an issue or do not see an app that you need, submit a support ticket</p>
     </div>
 
     <div class="row flex">
+    <% if(currentUser){ %>
+        <% if(currentUser.role != "default"){ %>
+        <div class="col-lg-6 col-sm-12">
+            <div class="img-thumbnail">
+                <a href="./srt/srt_dashboard">
+                    <img src="\img\srtd_snip.jpg" class="img-responsive">
+                    <div class="carousel-caption">
+                        <h1 class="title-overlay">SRT Dashboard</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <% } %>        
+        <% if(currentUser.role != "srt") { %>   
         <div class="col-lg-6 col-sm-12">
             <a href="./scatterplots/">
                 <div class="img-thumbnail">
@@ -37,16 +51,18 @@
                 </a>
             </div>
         </div>
-	<div class="col-lg-6 col-sm-12">
-            <div class="img-thumbnail">
-                <a href="https://portal.wau.co/ss-portal">
-                    <img src="\img\cp_snip.jpg" class="img-responsive">
-                    <div class="carousel-caption">
-                        <h1 class="title-overlay">Counselor Portal</h1>
-                    </div>
-                </a>
+        <div class="col-lg-6 col-sm-12">
+                <div class="img-thumbnail">
+                    <a href="https://portal.wau.co/ss-portal">
+                        <img src="\img\cp_snip.jpg" class="img-responsive">
+                        <div class="carousel-caption">
+                            <h1 class="title-overlay">Counselor Portal</h1>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
+    <% } } %>
     </div>
 </div>	
 
