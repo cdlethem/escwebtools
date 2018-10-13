@@ -4,7 +4,7 @@ var User = require("./models/user");
 const data = [{
     username: 'alec@elitescholarschina.com',
     password: 'calm-food-radiate',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'alexis@elitescholarschina.com',
@@ -14,7 +14,7 @@ const data = [{
   {
     username: 'abby@elitescholarschina.com',
     password: 'latter-boundary-shoe',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'bilal@elitescholarschina.com',
@@ -24,22 +24,22 @@ const data = [{
   {
     username: 'bongani@elitescholarschina.com',
     password: 'silky-church-dig',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'carolyn@elitescholarschina.com',
     password: 'toothsome-passion-sin',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'catherine@elitescholarschina.com',
     password: 'brainy-balance-ban',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'christopher@elitescholarschina.com',
     password: 'national-paint-try',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'colin@elitescholarschina.com',
@@ -49,12 +49,12 @@ const data = [{
   {
     username: 'dorothy@elitescholarschina.com',
     password: 'eager-garden-seek',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'ej@elitescholarschina.com',
     password: 'vague-disgust-conclude',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'elaine@elitescholarschina.com',
@@ -64,7 +64,7 @@ const data = [{
   {
     username: 'ellison@elitescholarschina.com',
     password: 'thinkable-picture-execute',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'emily@elitescholarschina.com',
@@ -74,37 +74,37 @@ const data = [{
   {
     username: 'emmas@elitescholarschina.com',
     password: 'sure-owner-plug',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'esc.cathy@gmail.com',
     password: 'selfish-pull-itch',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'henry@elitescholarschina.com',
     password: 'excellent-cemetery-agree',
-    role: 'default'
+    role: 'admin'
   },
   {
     username: 'jing@elitescholarschina.com',
     password: 'coordinated-throne-delight',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'jordana@elitescholarschina.com',
     password: 'flashy-drama-fetch',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'juliette@elitescholarschina.com',
     password: 'lyrical-battle-deceive',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'kate@elitescholarschina.com',
     password: 'thundering-setting-swim',
-    role: 'default'
+    role: 'admin'
   },
   {
     username: 'katie@elitescholarschina.com',
@@ -114,62 +114,62 @@ const data = [{
   {
     username: 'kelly@elitescholarschina.com',
     password: 'cooperative-lift-retire',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'kevin@elitescholarschina.com',
     password: 'every-balance-study',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'liza@elitescholarschina.com',
     password: 'venomous-pet-bounce',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'mack@elitescholarschina.com',
     password: 'sordid-idea-smile',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'madeleine@elitescholarschina.com',
     password: 'ratty-note-suggest',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'matthew@elitescholarschina.com',
     password: 'overwrought-juice-led',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'maya@elitescholarschina.com',
     password: 'abusive-confusion-lecture',
-    role: 'default'
+    role: 'admin'
   },
   {
     username: 'parke@elitescholarschina.com',
     password: 'brawny-cover-battle',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'peter@elitescholarschina.com',
     password: 'upset-elbow-groan',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'pj@elitescholarschina.com',
     password: 'sable-sack-trust',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'regina@elitescholarschina.com',
     password: 'sulky-honey-scorch',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'rosemary.jones@yale.edu',
     password: 'inner-sink-assume',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'stacy@elitescholarschina.com',
@@ -179,17 +179,17 @@ const data = [{
   {
     username: 'stephen@elitescholarschina.com',
     password: 'ambiguous-fall-place',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'sydney@elitescholarschina.com',
     password: 'gray-digestion-suspend',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'taylor@elitescholarschina.com',
     password: 'big-plants-satisfy',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'tomer@elitescholarschina.com',
@@ -199,27 +199,27 @@ const data = [{
   {
     username: 'xueying@elitescholarschina.com',
     password: 'scientific-afterthought-order',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'jason@elitescholarschina.com',
     password: 'tender-army-peep',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'jamaal@elitescholarschina.com',
     password: 'woebegone-discovery-scratch',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'iris@elitescholarschina.com',
     password: 'daffy-test-provide',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'nathan@elitescholarschina.com',
     password: 'unequal-rings-nail',
-    role: 'default'
+    role: 'counselor'
   },
   {
     username: 'amanda@elitescholarschina.com',
@@ -239,6 +239,11 @@ const data = [{
   {
     username: 'melinda@elitescholarschina.com',
     password: 'equal-entertainment-propose',
+    role: 'srt'
+  },
+  {
+    username: 'susansun@elitescholarschina.com',
+    password: 'daffy-discovery-deliver',
     role: 'srt'
   }
 ];

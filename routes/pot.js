@@ -4,4 +4,8 @@ var passport = require("passport");
 var User = require("../models/user");
 var middleware = require("../middleware")
 
+router.get("/pot_dashboard", middleware.isLoggedIn, function(req, res){
+    res.render("apps/pot_dashboard")
+})
+
 module.exports = router;

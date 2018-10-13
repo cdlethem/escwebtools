@@ -1,69 +1,98 @@
 <% include partials/header %>
 
-<div class="container">
-    <div class="jumbotron">
-        <h1><span class="glyphicon glyphicon-stats"></span> ESC Knowledge Base</h1>
-        <p>Welcome to the ESC knowledge base. Sign in and then select an application to get started. If you have an issue or do not see an app that you need, submit a support ticket</p>
-    </div>
-
-    <div class="row flex">
-    <% if(currentUser){ %>
-        <% if(currentUser.role != "default"){ %>
-        <div class="col-lg-6 col-sm-12">
-            <div class="img-thumbnail">
-                <a href="./srt/srt_dashboard">
-                    <img src="\img\srtd_snip.jpg" class="img-responsive">
-                    <div class="carousel-caption">
-                        <h1 class="title-overlay">SRT Dashboard</h1>
-                    </div>
-                </a>
-            </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                <span class="glyphicon glyphicon-stats"></span> ESC Web Tools</h1>
+            <p>Sign in and then select an application to get started. If you have an issue
+                or do not see an app that you need, submit a support ticket</p>
         </div>
-        <% } %>        
-        <% if(currentUser.role != "srt") { %>   
-        <div class="col-lg-6 col-sm-12">
-            <a href="./scatterplots/">
-                <div class="img-thumbnail">
-                    <img src="/img/scatterplots-snip.jpg" class="img-responsive">
-                    <div class="carousel-caption">
-                        <h1 class="title-overlay">Scatterplots</h1>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-6 col-sm-12">
-            <div class="img-thumbnail">
-                <a href="./school_choice_tools/">
-                    <img src="/img/sct_snip.jpg" class="img-responsive">
-                    <div class="carousel-caption">
-                        <h1 class="title-overlay">School Choice Tools</h1>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-6 col-sm-12">
-            <div class="img-thumbnail">
-                <a href="./t_minus_appcon/">
-                    <img src="\img\tma_snip.jpg" class="img-responsive">
-                    <div class="carousel-caption">
-                        <h1 class="title-overlay">t-Minus Appcon</h1>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-6 col-sm-12">
-                <div class="img-thumbnail">
-                    <a href="https://portal.wau.co/ss-portal">
-                        <img src="\img\cp_snip.jpg" class="img-responsive">
-                        <div class="carousel-caption">
-                            <h1 class="title-overlay">Counselor Portal</h1>
+        <div class="row flex">
+            <% if(currentUser){ %>
+                <!-- srt and admin can view  -->
+                <% if((["admin","srt"].indexOf(currentUser.role)) > -1 ) { %>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="img-thumbnail">
+                            <a href="./srt/srt_dashboard">
+                                <img src="\img\srtd_snip.jpg" class="img-responsive">
+                                <div class="carousel-caption ">
+                                    <h1 class="title-overlay">SRT Dashboard</h1>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </div>
+                    </div>
+                <% } %>
+                <!-- all roles except srt can view -->
+                <% if((["counselor","ses","pot","admin"].indexOf(currentUser.role)) > -1) { %>
+                    <div class="col-lg-6 col-sm-12">
+                        <a href="./scatterplots/">
+                            <div class="img-thumbnail">
+                                <img src="/img/scatterplots-snip.jpg" class="img-responsive">
+                                <div class="carousel-caption">
+                                    <h1 class="title-overlay">Scatterplots</h1>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="img-thumbnail">
+                            <a href="./school_choice_tools/">
+                                <img src="/img/sct_snip.jpg" class="img-responsive">
+                                <div class="carousel-caption">
+                                    <h1 class="title-overlay">School Choice Tools</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="img-thumbnail">
+                            <a href="./t_minus_appcon/">
+                                <img src="\img\tma_snip.jpg" class="img-responsive">
+                                <div class="carousel-caption">
+                                    <h1 class="title-overlay">t-Minus Appcon</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="img-thumbnail">
+                            <a href="https://portal.wau.co/ss-portal">
+                                <img src="\img\cp_snip.jpg" class="img-responsive">
+                                <div class="carousel-caption">
+                                    <h1 class="title-overlay">Counselor Portal</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <% } %>
+                <!-- counselor, pot, and admin can view -->
+                <% if((["counselor","pot","admin"].indexOf(currentUser.role)) > -1) { %>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="img-thumbnail">
+                            <a href="./admin/portal_admin_dashboard">
+                                <img src="\img\pad_snip.jpg" class="img-responsive">
+                                <div class="carousel-caption ">
+                                    <h1 class="title-overlay">Portal Admin Dashboard</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <% } %>
+                <!-- pot srt and admin can view -->
+                <% if((["pot","srt","admin"].indexOf(currentUser.role)) > -1) { %>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="img-thumbnail">
+                            <a href="./pot/pot_dashboard">
+                                <img src="\img\srtd_snip.jpg" class="img-responsive">
+                                <div class="carousel-caption">
+                                    <h1 class="title-overlay">POT Dashboard</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <% } %>    
+            <% } %>
         </div>
-    <% } } %>
     </div>
-</div>	
 
-<% include partials/footer %>
+    <% include partials/footer %>
